@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Segurança - Elevador Automotivo</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <h1>Sistema de Segurança - Elevador Automotivo</h1>
+
+  <div class="status-box">
+    <p><strong>Sensor de Peso:</strong> <span id="peso">---</span></p>
+    <p><strong>Sensor de Presença:</strong> <span id="presenca">---</span></p>
+    <p><strong></strong> <span id="magnetico"></span></p>
+  </div>
+
+  <div class="status-box" id="pesos-box">
+    <p><strong>Distribuição de Peso (kg):</strong></p>
+    <div class="pesos">
+      <div>Frente Esquerda (FL): <span id="pesoFL">0</span></div>
+      <div>Frente Direita (FR): <span id="pesoFR">0</span></div>
+      <div>Traseira Esquerda (RL): <span id="pesoRL">0</span></div>
+      <div>Traseira Direita (RR): <span id="pesoRR">0</span></div>
+    </div>
+  </div>
+
+<div class="controle">
+  <button onclick="simularFalha()">⚠️ Simular Falha</button>
+  <button id="liberarOperador" onclick="liberarElevador()" style="display:none">✅ Liberar Elevação</button>
+  <button id="liberarSimulacao" onclick="liberarSimulacao()" style="display:none">✅ Liberar Elevação</button>
+  <button onclick="acionarElevador()">Acionar Elevador</button>
+</div>
+
+  <div id="alerta"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
